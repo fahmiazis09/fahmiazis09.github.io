@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Portfolio Fahmi.A</title>
+	<meta name="description" content="">  
+	<meta name="author" content="">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="data:image/png;base64,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">
+
+</head>
+
+<body id="top">
+
+	<!-- header 
+   ================================================== -->
+   <header>   	
+   	<div class="row">
+
+   		<div class="bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
+
+	   		<div class="logo">
+		         <a href="index.html">Fahmi Azis</a>
+		      </div>		      
+
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#about" title="">Tentang</a></li>
+						<li><a class="smoothscroll"  href="#resume" title="">Resume</a></li>
+						<li><a class="smoothscroll"  href="#services" title="">Services</a></li>					
+						<li><a class="smoothscroll"  href="#contact" title="">Contact</a></li>	
+									
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
+
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
+
+   	<div class="intro-overlay"></div>	
+
+   	<div class="intro-content">
+   		<div class="row">
+
+   			<div class="col-twelve">
+
+	   			
+	   			<h1>Fahmi Azis</h1>
+
+	   			<p class="intro-position">
+	   				<span>Web Designer</span>
+	   				<span>Design Grafis</span> 
+	   			</p>
+
+	   			<a class="button stroke smoothscroll" href="#about" title="">Lainnya Tentang Saya</a>
+
+	   		</div>  
+   			
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+    	
+
+   </section> <!-- /intro -->
+
+
+   <!-- about section
+   ================================================== -->
+   <section id="about">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Tentang</h5>
+   			<div class="intro-info">
+
+   				<img src="C:\Users\fahmi\OneDrive\Gambar\(4) Facebook_files\330399323_2639758256165680_1389959893637537333_n.jpg" alt="Profile Picture">
+
+   				<p class="lead">Hallo Saya Fahmi azis Saya Pribadi Sangat Senang Sekali Dengan Berkembang Nya Perangkat Lunak & Gim Yang Sangat Pesat </p>
+   			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+
+   		<div class="col-six tab-full">
+
+   			<ul class="info-list">
+   				<li>
+   					<strong>Nama Panjang:</strong>
+   					<span>Fahmi Azis</span>
+   				</li>
+   				<li>
+   					<strong>Tanggal Lahir:</strong>
+   					<span>09,Maret,2006</span>
+   				</li>
+   				<li>
+   					<strong>Keahlian:</strong>
+   					<span>Web Designer,Design Grafis</span>
+   				</li>
+   				<li>
+   					<strong>Instagram:</strong>
+   					<span>@fhmiazis</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<span>fahmiazis154@gmail.com</span>
+   				</li>
+
+   			</ul> <!-- /info-list -->
+
+   	</div>
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hubungi Saya</a>
+   			<a href="#" title="Download CV" class="button button-primary">Download CV</a>
+   		</div>   		
+   	</div>
+
+   </section> <!-- /process-->    
+
+
+   <!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Melanjutkan</h5>
+   			
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Pengalaman kerja</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>PT.Inovindo Digital Media</h3>
+	   					<p>2024 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Web develover</h4>
+	   					<p>selama pkl saya mendapatkan ilmu baru yang saya pelajari dari PT.Inovindo Digital Media dari membuat website </p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>pramuka</h3>
+	   					<p>2023-2025</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Gandi Sakti</h4>
+	   					<p>selama saya di pramuka saya mendapatkan pelajaran yang sangat berharga bagi saya sendiri saya sangat senang melakukan kegiatan tersebut</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Staff Batalyon</h3>
+	   					<p>2022-2025</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>anubawa athma adhibrata</h4>
+	   					<p>selama saya di staff batalyon saya merasakan yang nama nya keluarga keharmonisan dan dulu saya pernah menjabat sebagai polisi taruna dan tugas saya mengamankan taruna/i yang bolos.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+   	
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Pendidikan</h2>
+
+			   <div class="timeline-block">
+
+				<div class="timeline-ico">
+					<i class="fa fa-briefcase"></i>
+				</div>
+
+				<div class="timeline-header">
+					<h3>SMKN 1 BINONG</h3>
+					<p>2022-2025</p>
+				</div>
+
+				<div class="timeline-content">
+					<h4>STARBIN</h4>
+					<p>Sekolah Yang Berbasis Jurusan Dan Sekolah Ketarunaan Yang Ada Di Binong-Subang</p>
+				</div>
+				<div class="timeline-block">
+
+					<div class="timeline-ico">
+						<i class="fa fa-briefcase"></i>
+					</div>
+
+					<div class="timeline-header">
+						<h3>SMPN 1 BINONG</h3>
+						<p>2019-2022</p>
+					</div>
+
+					<div class="timeline-content">
+						<h4>NEBINZA</h4>
+						<p>Sekolah Negri Yang ada Di Binong.</p>
+					</div>
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>SDN PITALOKA</h3>
+	   					<p>2013-2019</p>
+					</div>
+	   			</div> <!-- /timeline-block -->
+
+	   		 <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+		
+	</section> <!-- /features -->
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	
+	<!-- services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="overlay"></div>
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Services</h5>
+   			<h1>ada yang bisa saya bantu?</h1>
+
+   			<p class="lead">Layanan merangkum segala bentuk aktivitas atau pelayanan yang disediakan oleh satu entitas untuk memenuhi kebutuhan, keinginan, atau masalah pelanggan. Terlepas dari keberagaman jenisnya, layanan secara khusus fokus pada memberikan nilai atau manfaat tanpa melibatkan transfer kepemilikan benda fisik.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row services-content">
+
+   		<div id="owl-slider" class="owl-carousel services-list">
+
+	      	<div class="service">	
+
+	      		<span class="icon"><i class="icon-earth"></i></span>            
+
+	            <div class="service-content">	
+
+	            	 <h3>Webdesign</h3>
+
+		            <p class="desc">1.Desain Web Kreatif: Tim desain kami berkembang dengan ide-ide segar dan solusi yang kreatif untuk memastikan situs web Anda tidak hanya menarik perhatian, tetapi juga mengkomunikasikan pesan Anda dengan jelas.
+
+						2.Pengembangan Responsif: Kami memahami pentingnya aksesibilitas. Setiap situs web yang kami kembangkan dioptimalkan untuk tampil sempurna di berbagai perangkat, mulai dari desktop hingga ponsel pintar..
+	         		</p>
+	         		
+	         	</div> 	         	 
+
+				</div> <!-- /service -->
+
+				<div class="service">	
+
+					<span class="icon"><i class="icon-window"></i></span>                          
+
+	            <div class="service-content">	
+
+	            	<h3>Web Development</h3>  
+
+		            <p class="desc"> 1.Desain dan Pengembangan Situs Web: Kami mengkreasikan situs web yang tidak hanya estetis, tetapi juga berfokus pada pengalaman pengguna yang optimal. Dari konsep hingga peluncuran, kami menangani setiap langkah.
+
+						2.Aplikasi Web dan Ponsel: Dengan keahlian dalam pengembangan aplikasi berbasis web dan mobile, kami membantu Anda menjangkau pengguna di berbagai platform dengan solusi yang responsif dan canggih.
+						
+						
+	         		</p>
+
+	            </div>	                          
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-paint-brush"></i></span>		            
+
+	            <div class="service-content">
+
+	            	<h3>Branding</h3>
+
+		            <p class="desc"> 1.Kebermaknaan: Kami berkomitmen untuk menciptakan merek yang memberikan pengalaman lebih daripada sekadar produk atau layanan. Setiap interaksi dengan merek kami adalah kesempatan untuk memberikan nilai tambah dan meninggalkan kesan positif.
+
+						2.Inovasi Berkelanjutan: Kami menganut prinsip bahwa inovasi adalah fondasi kesuksesan. Dengan selalu mencari cara baru untuk menyampaikan pesan dan layanan, kami menjaga merek kami tetap segar dan relevan.
+	        			</p> 
+
+	            </div> 	            	               
+
+			   </div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="icon-toggles"></i></span>	              
+
+	            <div class="service-content">
+
+	            	<h3>python</h3>
+
+		            <p class="desc">Pengembangan Web dengan Django/Flask: Membangun situs web yang dinamis dan mudah dikembangkan dengan menggunakan kerangka kerja Django atau Flask. Kami mengintegrasikan fungsionalitas khusus sesuai dengan kebutuhan bisnis Anda.
+
+						Aplikasi Python untuk Analisis Data: Mengolah dan menganalisis data dengan menggunakan perpustakaan Python seperti Pandas dan NumPy. Kami membantu Anda mendapatkan wawasan berharga dari data Anda.
+	         		</p> 
+	         		
+	            </div>                
+
+				</div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-image"></i></span>	            
+
+	            <div class="service-content">
+
+	            	<h3>Graphics Design</h3>
+
+		            <p class="desc"> 1.Identitas Merek dan Logo: Membuat logo yang mencerminkan esensi dan nilai-nilai perusahaan Anda, serta merancang identitas merek yang konsisten dan kuat.
+
+						2.Desain Materi Pemasaran: Menghasilkan materi pemasaran yang menarik perhatian, termasuk brosur, pamflet, poster, dan katalog yang mencerminkan profesionalisme dan kreativitas.
+					</p>
+
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
+
+	            <div class="service-content">
+
+	            	 <h3>Consultancy</h3>
+
+		            <p class="desc"> 1.Strategi Bisnis dan Pengembangan: Menyusun rencana strategis yang kokoh untuk pertumbuhan bisnis, pengembangan produk, dan ekspansi pasar.
+
+						2.Manajemen Operasional dan Efisiensi: Menganalisis operasi bisnis Anda untuk meningkatkan efisiensi, mengidentifikasi proses yang dapat dioptimalkan, dan memberikan solusi untuk meningkatkan kinerja.
+	        			</p> 
+	        			
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+	      </div> <!-- /services-list -->
+   		
+   	</div> <!-- /services-content -->
+		
+	</section> <!-- /services -->	
+
+
+	<!-- stats Section
+   ================================================== -->
+
+	
+   <!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contact </h5>
+   			<h1>Saya Ingin Mendengar Dari Anda.</h1>
+
+   			<p class="lead">Saya senang untuk berkomunikasi dan berkolaborasi. Jika Anda memiliki pertanyaan, peluang kerjasama, atau ingin berdiskusi lebih lanjut tentang proyek atau topik tertentu, jangan ragu untuk menghubungi saya melalui alamat email saya. Saya juga aktif di platform LinkedIn dan Twitter, jadi jangan sungkan untuk terhubung atau mengikuti perkembangan saya. Selain itu, informasi lebih lanjut tentang proyek dan pekerjaan saya dapat ditemukan di situs web pribadi saya.
+
+				Terima kasih atas perhatian Anda, dan saya berharap dapat berkomunikasi dengan Anda segera!</p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+   	<div class="row contact-form">
+
+   		<div class="col-twelve">
+
+            <!-- form -->
+            <form name="contactForm" id="contactForm" method="post" action="">
+      			<fieldset>
+
+                  <div class="form-field">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Nama" value="" minlength="2" required="">
+                  </div>
+                  <div class="form-field">
+	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+	               </div>
+                  <div class="form-field">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+	               </div>                       
+                  <div class="form-field">
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="Pesan" rows="10" cols="50" required=""></textarea>
+	               </div>                      
+                 <div class="form-field">
+                     <button class="submitform">Kirim</button>
+                     <div id="submit-loader">
+                        <div class="text-loader">mengirim...</div>                             
+       				      <div class="s-loader">
+								  	<div class="bounce1"></div>
+								  	<div class="bounce2"></div>
+								  	<div class="bounce3"></div>
+								</div>
+							</div>
+                  </div>
+
+      			</fieldset>
+      		</form> <!-- Form End -->
+
+            <!-- contact-warning -->
+            <div id="message-warning">            	
+            </div>            
+            <!-- contact-success -->
+      		<div id="message-success">
+               <i class="fa fa-check"></i>Pesan mu telah dikirim, terimakasih!<br>
+      		</div>
+
+         </div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /contact-form -->
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Dimana untuk mecari saya</h5>
+
+   			<p>
+            kediri,rt.12/03 <br>
+            Binong,Subang<br>
+           
+            </p>
+
+   		</div>
+
+   		<div class="col-four tab-full collapse">
+
+   			<div class="icon">
+   				<i class="icon-mail"></i>
+   			</div>
+
+   			<h5>Email saya melalui</h5>
+
+   			<p>fahmiazis154@gmail.com<br>
+			   				     
+			   </p>
+
+   		</div>
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-phone"></i>
+   			</div>
+
+   			<h5>Hubungi saya melalui</h5>
+
+   			<p>Phone: (+63) 82125734152<br>
+			     
+			   </p>
+
+   		</div>
+   		
+   	</div> <!-- /contact-info -->
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>© Copyright fahmi2024.</span> 
+		        	<span>Design by <a href="#about">Fahmi Aziz</a></span>	         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+
+</body>
+
+</html>
